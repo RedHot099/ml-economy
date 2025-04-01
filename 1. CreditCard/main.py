@@ -4,19 +4,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import classification_report, accuracy_score
 from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.svm import SVC
 from sklearn.metrics import (
-    classification_report,
-    accuracy_score,
-    make_scorer,
-    f1_score,
     confusion_matrix,
 )
-from sklearn.preprocessing import StandardScaler
 from imblearn.over_sampling import SMOTE
 
-df = pd.read_csv("data/creditcard.csv")
+df = pd.read_csv("../data/creditcard.csv")
 
 X = df.drop("Class", axis=1)
 y = df["Class"]
